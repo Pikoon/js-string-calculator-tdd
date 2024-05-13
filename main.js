@@ -7,9 +7,6 @@ export function add(stringNumber){
         return 0
     try {
         const arr = stringNumber.split(",")
-        if (arr.length>2){
-            return "Erreur : que 2 chiffres bon sang ! "
-        }
         let number = 0
         arr.forEach(element => {
             if (isNaN(parseInt(element))){
@@ -20,7 +17,7 @@ export function add(stringNumber){
         if (arr.length == 1){
             return parseInt(arr[0])
         }
-        return parseInt(arr[1]) + parseInt(arr[0])
+        return number
     } catch (e){
         return "Il ne faut rentrer que des chiffres !!!"
     } 
