@@ -10,7 +10,7 @@ test("1 plus 2", () => {
 })
 
 test("avec lettres", () => {
-  expect(add("1,l")).toBe("Il ne faut rentrer que des chiffres !!!")
+  expect(add("1,l")).toBe("NaN")
 })
 
 test("1 chiffre", () => {
@@ -19,4 +19,12 @@ test("1 chiffre", () => {
 
 test("trop long", () => {
   expect(add("1,2,3")).toBe(6)
+})
+
+test("saut a la ligne", () => {
+  expect(add("1\n2,3")).toBe(6)
+})
+
+test("saut a la ligne", () => {
+  expect(add("1,2,3a")).toBe("NaN")
 })
